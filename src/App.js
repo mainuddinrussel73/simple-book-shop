@@ -7,6 +7,7 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import FAQ from './pages/FAQ';
 import BookDetails from './pages/BookDetails';
+import NotFound from './pages/NotFound'; // 404 Page
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -33,15 +34,14 @@ function App() {
     <div className="App">
       <Navbar />
       <ToastContainer />
-      {/* Routes and other components */}
       <Routes>
       <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<FAQ />} />
         
-        {/* Use an arrow function to pass props */}
         <Route path="/book/:bookId" element={<BookDetails books={books} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
