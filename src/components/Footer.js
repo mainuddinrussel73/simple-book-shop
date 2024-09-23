@@ -13,20 +13,20 @@ const Footer = () => {
               Discover your next great read at Not so Good Readers. We offer a wide range of books from classics to the latest releases. Join our community of book lovers!
             </p>
             <div className="socials">
-              <a href="#"><FaFacebookF /></a>
-              <a href="#"><FaTwitter /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaLinkedin /></a>
+              <a><FaFacebookF /></a>
+              <a><FaTwitter /></a>
+              <a><FaInstagram /></a>
+              <a ><FaLinkedin /></a>
             </div>
           </div>
 
           <div className="footer-section links">
             <h3 >Quick Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><a>Home</a></li>
+              <li><a  >About</a></li>
+              <li><a  >Blog</a></li>
+              <li><a  >FAQ</a></li>
             </ul>
           </div>
 
