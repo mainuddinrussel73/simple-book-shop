@@ -1,0 +1,140 @@
+/* Footer CSS */
+
+.footer {
+    background-color: #FEFDFD;
+    color: #7D4F4A;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #f1c40f;
+  }
+  
+  .footer-section p {
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #7D4F4A;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #f1c40f;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .socials a {
+    color: #7D4F4A;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .socials a:hover {
+    color: #f1c40f;
+  }
+  .footer-section.subscribe {
+    flex: 1;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .subscribe-form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    outline: none;
+  }
+  
+  .subscribe-form button {
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    color: #2d2d2d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #e1b10e;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding: 20px 0;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-section {
+      margin-bottom: 30px;
+    }
+    .subscribe-form {
+      flex-direction: column;
+    }
+  
+    .subscribe-form input {
+      width: 90%;
+    }
+  
+    .subscribe-form button {
+      width: fit-content;
+      margin-top: 10px;
+    }
+  }
+  

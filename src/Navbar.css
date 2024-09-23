@@ -1,0 +1,199 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #FEFDFD;
+  color: #7D4F4A;
+  margin-top: 20px;
+  margin-left:15px;
+  margin-right: 15px;
+  border-radius: 20px;
+  z-index: 1000;
+}
+/* Navbar logo and title container */
+.navbar-logo-title {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styles */
+.navbar-logo {
+  height: 60px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+/* Website title styles */
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+}
+
+/* Center the nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: 15px;
+  margin-right: 15px;
+ 
+}
+
+.nav-links li {
+  margin: 0 5px;
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: #7D4F4A; /* Button text color */
+  padding: 20px 20px; /* Padding inside the button */
+  background-color: #FEFDFD; /* Button background color */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid transparent; /* Border for hover effect */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  font-size: 20px;
+  
+}
+
+.nav-links a:hover {
+  background-color: #F1F0EF; /* Darker background on hover */
+  border: 1px solid white; /* Show border on hover */
+}
+
+/* Button styles */
+
+
+.nav-button1{
+  margin-left: 1rem;
+  padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.nav-button2 {
+  display: none; /* Space between buttons */
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 40px; /* Adjust size for mobile */
+  }
+
+  .navbar-title {
+    font-size: 20px; /* Adjust title size for mobile */
+  }
+  .nav-links {
+    display: none; /* Hide links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 105px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #FEFDFD;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    opacity: 0.978;
+    z-index: 1000; /* Ensure menu is on top */
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 1s ease;
+  }
+  .nav-links li {
+    margin: 10px 10px;
+  }
+  .nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #7D4F4A; /* Button text color */
+    padding: 1px 1px; /* Padding inside the button */
+    background-color: #FEFDFD; /* Button background color */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid transparent; /* Border for hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+    
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .nav-buttons{
+    display: block;
+  }
+  .nav-button1{
+    display: none;
+  }
+
+  .nav-button2 {
+    display: block;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  /* Button styles in dropdown */
+  .nav-links .nav-button {
+    margin: 1rem 0; /* Space buttons in dropdown */
+    width: 80%; /* Make buttons wider in dropdown */
+    align-self: center; /* Center buttons */
+    background-color: #555; /* Add background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 0.5rem; /* Button padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+  }
+  /* Overlay for translucent background */
+.dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  z-index: 500; /* Below the navbar but above the content */
+}
+  
+}
