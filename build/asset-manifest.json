@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/simple-book-shop/static/css/main.45ada8ae.css",
-    "main.js": "/simple-book-shop/static/js/main.900fd3b4.js",
+    "main.js": "/simple-book-shop/static/js/main.04bc17f2.js",
     "static/js/453.920fa5a9.chunk.js": "/simple-book-shop/static/js/453.920fa5a9.chunk.js",
     "static/media/banner1.jpeg": "/simple-book-shop/static/media/banner1.ec30d537638b01ee693f.jpeg",
     "static/media/banner3.jpg": "/simple-book-shop/static/media/banner3.f0115a4ac3ffcbd71001.jpg",
@@ -13,11 +13,11 @@
     "static/media/slick.woff": "/simple-book-shop/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/simple-book-shop/index.html",
     "main.45ada8ae.css.map": "/simple-book-shop/static/css/main.45ada8ae.css.map",
-    "main.900fd3b4.js.map": "/simple-book-shop/static/js/main.900fd3b4.js.map",
+    "main.04bc17f2.js.map": "/simple-book-shop/static/js/main.04bc17f2.js.map",
     "453.920fa5a9.chunk.js.map": "/simple-book-shop/static/js/453.920fa5a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.45ada8ae.css",
-    "static/js/main.900fd3b4.js"
+    "static/js/main.04bc17f2.js"
   ]
 }
