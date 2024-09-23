@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/Footer.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -13,20 +14,36 @@ const Footer = () => {
               Discover your next great read at Not so Good Readers. We offer a wide range of books from classics to the latest releases. Join our community of book lovers!
             </p>
             <div className="socials">
-              <a><FaFacebookF /></a>
-              <a><FaTwitter /></a>
-              <a><FaInstagram /></a>
-              <a ><FaLinkedin /></a>
+              <a href="https://www.facebook.com/"><FaFacebookF /></a>
+              <a href="https://www.facebook.com/"><FaTwitter /></a>
+              <a href="https://www.facebook.com/"><FaInstagram /></a>
+              <a href="https://www.facebook.com/"><FaLinkedin /></a>
             </div>
           </div>
 
           <div className="footer-section links">
             <h3 >Quick Links</h3>
             <ul>
-              <li><a>Home</a></li>
-              <li><a  >About</a></li>
-              <li><a  >Blog</a></li>
-              <li><a  >FAQ</a></li>
+              <li> 
+                <Link  className='nav-item' to="/" >
+                Home
+                </Link>
+              </li>
+              <li>
+                <Link  className='nav-item' to="/about" >
+                About
+                </Link>
+              </li>
+              <li>
+                <Link  className='nav-item' to="/blog" >
+                Blog
+                </Link>
+              </li>
+              <li>
+                <Link  className='nav-item' to="/faq" >
+                FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
