@@ -39,7 +39,7 @@ function App() {
       <Navbar />
       <ToastContainer />
       <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="simple-book-shop/" element={<Home />} />
         <Route path="simple-book-shop/about" element={<About />} />
         <Route path="simple-book-shop/blog" element={<Blog />} />
         <Route path="simple-book-shop/faq" element={<FAQ />} />
