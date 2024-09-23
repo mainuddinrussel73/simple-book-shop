@@ -41,12 +41,12 @@ function App() {
       <ToastContainer />
       <Routes>
       <Route path="simple-book-shop/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/faq" element={<FAQ />} />
+        <Route path="simple-book-shop/about" element={<About />} />
+        <Route path="simple-book-shop/blog" element={<Blog />} />
+        <Route path="simple-book-shop/faq" element={<FAQ />} />
         
-        <Route path="/book/:bookId" element={<BookDetails books={books} />} />
-        <Route path="/*" element={<NotFound />} />
+        <Route path="simple-book-shop/book/:bookId" element={<BookDetails books={books} />} />
+        <Route path="simple-book-shop/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
