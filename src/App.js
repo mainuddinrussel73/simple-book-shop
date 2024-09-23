@@ -37,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      
       <ToastContainer />
       <Routes>
       <Route path="simple-book-shop/" element={<Home />} />
