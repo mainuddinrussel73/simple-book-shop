@@ -45,7 +45,7 @@ function App() {
         <Route path="simple-book-shop/faq" element={<FAQ />} />
         
         <Route path="simple-book-shop/book/:bookId" element={<BookDetails books={books} />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="simple-book-shop/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
