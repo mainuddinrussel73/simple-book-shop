@@ -1,6 +1,10 @@
 .not-found {
     text-align: center;
     padding: 50px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px; 
   }
   
   .not-found h1 {
@@ -32,4 +36,13 @@
   .back-home-btn:hover {
     background-color: #e63e00;
   }
-  
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .not-found  {
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 130px;    
+     
+      }
+  }

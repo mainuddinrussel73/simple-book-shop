@@ -4,7 +4,7 @@
   margin-right: 20px;
   margin-top: 20px;  
     padding: 2rem;
-    background-color: #F6ECEB;
+    background-color: #f9f9f9;
     border-radius: 20px;
   }
   
@@ -14,24 +14,63 @@
     text-align: center;
   }
   
-  .faq-item {
-    margin-bottom: 2rem;
-    background-color: #fff;
+
+
+.accordion-item {
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+    background-color: #F6ECEB;
     padding: 1.5rem;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 8px;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #F6ECEB;
+  cursor: pointer;
+}
+
+.accordion-title h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-content {
+  padding: 15px;
+  background-color: #F6ECEB;
+  display: none;
+  animation: slide-down 0.3s ease;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.accordion-item .accordion-content {
+  display: block;
+}
+
+/* Smooth transition for accordion */
+@keyframes slide-down {
+  from {
+    max-height: 0;
+    opacity: 0;
   }
-  
-  .faq-item h2 {
-    color: #333;
-    margin-bottom: 0.5rem;
+  to {
+    max-height: 100%;
+    opacity: 1;
   }
-  
-  .faq-item p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
+}
 
 /* Responsive Layout */
 @media (max-width: 768px) {
