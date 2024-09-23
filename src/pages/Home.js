@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Banner from '../components/Banner';
 import BookCard from '../components/BookCard';
-import '../BookCard.css'; // Add styles for active class
+import '../styles/BookCard.css';
 
 const Home = () => {
   const [books, setBooks] = useState([]);

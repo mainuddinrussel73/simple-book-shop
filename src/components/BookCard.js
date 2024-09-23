@@ -1,6 +1,6 @@
 import React,  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../BookCard.css'; // Add styles for active class
+import '../styles/BookCard.css';
 
 const BookCard = ({ book, imageUrl }) => {
   console.log(book);

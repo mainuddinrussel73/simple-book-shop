@@ -1,9 +1,9 @@
 import React,{ useState,useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../Navbar.css'; // Add styles for active class
+import '../styles/Navbar.css';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FiHome, FiInfo, FiBookOpen, FiHelpCircle } from 'react-icons/fi'; // Icons for links
-import weblogo from '../images/logo.png'
+import weblogo from '../assets/images/logo.png'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage menu visibility
   const dropdownRef = useRef(null);

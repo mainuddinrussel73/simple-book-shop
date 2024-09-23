@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import '../BookDetails.css'; // Add styles for active class
+import '../styles/BookDetails.css'; // Add styles for active class
 import { FaHeart, FaShoppingCart, FaDownload } from 'react-icons/fa'; // Import icons
 
 const BookDetails = ({ books }) => {
