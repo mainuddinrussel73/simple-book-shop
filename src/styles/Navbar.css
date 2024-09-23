@@ -45,6 +45,7 @@
 .nav-links {
   display: flex;
   list-style: none;
+  line-height: 1px;
   margin: 0;
   padding: 0;
   z-index: 999;
@@ -55,6 +56,89 @@
  
 }
 
+
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: #7D4F4A; /* Button text color */
+  background-color: #FEFDFD; /* Button background color */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid transparent; /* Border for hover effect */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  font-size: 20px;
+  
+}
+
+
+.nav-item{
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; 
+  align-items: center; 
+}
+.nav-item:hover{
+  background-color: #F1F0EF; /* Darker background on hover */
+  border: 1px solid white; /* Show border on hover */
+}
+.nav-item div{
+  line-height: 1px;
+  text-decoration: none;
+  margin-left: 10px;
+
+}
+
+/* Button styles */
+
+
+.nav-button1{
+  margin-left: 1rem;
+  padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.nav-button2 {
+  display: none; /* Space between buttons */
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+
+  
+/* Center the nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+ 
+}
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nav-item div{
+  margin-left: 10px;
+line-height: 1px;
+}
 .nav-links li {
   margin: 0 5px;
 }
@@ -62,7 +146,6 @@
 .nav-links a {
   text-decoration: none; /* Remove underline */
   color: #7D4F4A; /* Button text color */
-  padding: 20px 20px; /* Padding inside the button */
   background-color: #FEFDFD; /* Button background color */
   border-radius: 10px; /* Rounded corners */
   border: 1px solid transparent; /* Border for hover effect */
@@ -88,16 +171,13 @@
     color: #7D4F4A;
     font-size: 17px;
     font-weight: bold;
+    margin-bottom: 5px;
+        margin-top: 5px;
 }
 
 .nav-button2 {
   display: none; /* Space between buttons */
 }
-
-/* Hamburger menu styles */
-.menu-toggle {
-  display: none; /* Hidden by default */
-  cursor: pointer;
 }
 
 /* Responsive styles */
@@ -127,7 +207,7 @@
     transition: all 1s ease;
   }
   .nav-links li {
-    margin: 10px 10px;
+    margin: 2px 10px;
   }
   .nav-links a {
     text-decoration: none; /* Remove underline */
@@ -141,7 +221,24 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
-
+  .nav-item{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-grow: 1; 
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav-item:hover{
+    background-color: #F1F0EF; /* Darker background on hover */
+    border: 1px solid white; /* Show border on hover */
+  }
+  .nav-item div{
+    line-height: 1px;
+    text-decoration: none;
+  
+  }
   .nav-links.active {
     display: flex; /* Show links when active */
     

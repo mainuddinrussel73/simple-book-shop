@@ -5,6 +5,8 @@
     color: #7D4F4A;
     padding: 40px 0;
     font-family: 'Arial', sans-serif;
+    left:0px;
+    bottom:0px;
   }
   
   .footer .container {
@@ -23,6 +25,8 @@
     flex: 1;
     margin-bottom: 20px;
     max-width: 100%;
+    margin-left: 15px;
+
   }
   
   .footer-section h2,

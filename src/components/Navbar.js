@@ -52,27 +52,57 @@ const Navbar = () => {
             <img src={weblogo} alt="Book Shop Logo" className="navbar-logo" />
           </Link>
           {/* Website Title */}
-          <h1 className="navbar-title">Book Shop</h1>
+          <h1 className="navbar-title">Not so Good Readers</h1>
       </div>
       <ul ref={dropdownRef}  className={`nav-links ${isOpen ? 'active' : ''}`}>
       <li>
           <Link to="/" onClick={closeDropdown}>
-            <FiHome className="nav-icon" /> Home
+          <div className='nav-item'>
+              <div>
+              <FiHome className="nav-icon" /> 
+              </div>
+              <div>
+                <p>Home</p>
+              </div>
+            </div>
           </Link>
         </li>
         <li>
           <Link to="/about" onClick={closeDropdown}>
-            <FiInfo className="nav-icon" /> About
+          <div className='nav-item'>
+              <div>
+              <FiInfo className="nav-icon" /> 
+              </div>
+              <div>
+                <p>About</p>
+              </div>
+            </div>
           </Link>
         </li>
         <li>
           <Link to="/blog" onClick={closeDropdown}>
-            <FiBookOpen className="nav-icon" /> Blog
+          <div className='nav-item'>
+              <div>
+              <FiBookOpen className="nav-icon" /> 
+              </div>
+              <div>
+                <p>Blog</p>
+              </div>
+            </div>
+           
           </Link>
         </li>
         <li>
-          <Link to="/faq" onClick={closeDropdown}>
-            <FiHelpCircle className="nav-icon" /> FAQ
+          <Link to="/faq" onClick={closeDropdown} >
+            <div className='nav-item'>
+              <div >
+              <FiHelpCircle className="nav-icon" /> 
+              </div>
+              <div>
+                <p>FAQ</p>
+              </div>
+            </div>
+           
           </Link>
         </li>
         <li><button className="nav-button2" onClick={closeDropdown}>Buy Book</button></li>
