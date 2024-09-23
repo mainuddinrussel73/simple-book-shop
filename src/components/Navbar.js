@@ -56,7 +56,7 @@ const Navbar = () => {
       </div>
       <ul ref={dropdownRef}  className={`nav-links ${isOpen ? 'active' : ''}`}>
       <li>
-          <Link className='nav-item' to="/" onClick={closeDropdown}>
+          <Link className='nav-item' to="simple-book-shop/" onClick={closeDropdown}>
          
               <div>
               <FiHome className="nav-icon" /> 
@@ -68,7 +68,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link  className='nav-item' to="/about" onClick={closeDropdown}>
+          <Link  className='nav-item' to="simple-book-shop/about" onClick={closeDropdown}>
          
               <div>
               <FiInfo className="nav-icon" /> 
@@ -79,7 +79,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link  className='nav-item' to="/blog" onClick={closeDropdown}>
+          <Link  className='nav-item' to="simple-book-shop/blog" onClick={closeDropdown}>
           
               <div>
               <FiBookOpen className="nav-icon" /> 
@@ -92,7 +92,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link  className='nav-item' to="/faq" onClick={closeDropdown} >
+          <Link  className='nav-item' to="simple-book-shop/faq" onClick={closeDropdown} >
             
               <div >
               <FiHelpCircle className="nav-icon" /> 
