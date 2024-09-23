@@ -56,7 +56,7 @@ const Navbar = () => {
       </div>
       <ul ref={dropdownRef}  className={`nav-links ${isOpen ? 'active' : ''}`}>
       <li>
-          <Link className='nav-item' to="simple-book-shop/" onClick={closeDropdown}>
+          <Link className='nav-item' to="/" onClick={closeDropdown}>
          
               <div>
               <FiHome className="nav-icon" /> 
