@@ -52,56 +52,54 @@ const Navbar = () => {
             <img src={weblogo} alt="Book Shop Logo" className="navbar-logo" />
           </Link>
           {/* Website Title */}
-          <h1 className="navbar-title">Not so Good Readers</h1>
+          <h1 className="navbar-title">Groot Readers</h1>
       </div>
       <ul ref={dropdownRef}  className={`nav-links ${isOpen ? 'active' : ''}`}>
       <li>
-          <Link to="/" onClick={closeDropdown}>
-          <div className='nav-item'>
+          <Link className='nav-item' to="/" onClick={closeDropdown}>
+         
               <div>
               <FiHome className="nav-icon" /> 
               </div>
               <div>
                 <p>Home</p>
               </div>
-            </div>
+           
           </Link>
         </li>
         <li>
-          <Link to="/about" onClick={closeDropdown}>
-          <div className='nav-item'>
+          <Link  className='nav-item' to="/about" onClick={closeDropdown}>
+         
               <div>
               <FiInfo className="nav-icon" /> 
               </div>
               <div>
                 <p>About</p>
               </div>
-            </div>
           </Link>
         </li>
         <li>
-          <Link to="/blog" onClick={closeDropdown}>
-          <div className='nav-item'>
+          <Link  className='nav-item' to="/blog" onClick={closeDropdown}>
+          
               <div>
               <FiBookOpen className="nav-icon" /> 
               </div>
               <div>
                 <p>Blog</p>
               </div>
-            </div>
+           
            
           </Link>
         </li>
         <li>
-          <Link to="/faq" onClick={closeDropdown} >
-            <div className='nav-item'>
+          <Link  className='nav-item' to="/faq" onClick={closeDropdown} >
+            
               <div >
               <FiHelpCircle className="nav-icon" /> 
               </div>
               <div>
                 <p>FAQ</p>
               </div>
-            </div>
            
           </Link>
         </li>
