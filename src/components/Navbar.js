@@ -68,7 +68,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link  className='nav-item' to="simple-book-shop/about" onClick={closeDropdown}>
+          <Link  className='nav-item' to="/about" onClick={closeDropdown}>
          
               <div>
               <FiInfo className="nav-icon" /> 
