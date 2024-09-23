@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mainuddinrussel73.github.io/simple-book-shop/static/css/main.9dfcbfa0.css",
+    "main.js": "/mainuddinrussel73.github.io/simple-book-shop/static/js/main.fdb6a805.js",
+    "static/js/453.68c5b719.chunk.js": "/mainuddinrussel73.github.io/simple-book-shop/static/js/453.68c5b719.chunk.js",
+    "static/media/banner1.jpeg": "/mainuddinrussel73.github.io/simple-book-shop/static/media/banner1.ec30d537638b01ee693f.jpeg",
+    "static/media/banner3.jpg": "/mainuddinrussel73.github.io/simple-book-shop/static/media/banner3.f0115a4ac3ffcbd71001.jpg",
+    "static/media/banner2.jpg": "/mainuddinrussel73.github.io/simple-book-shop/static/media/banner2.aec94c755e3feb926cf7.jpg",
+    "static/media/logo.png": "/mainuddinrussel73.github.io/simple-book-shop/static/media/logo.cc17cf8dcf72004fb4aa.png",
+    "static/media/slick.svg": "/mainuddinrussel73.github.io/simple-book-shop/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/mainuddinrussel73.github.io/simple-book-shop/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/mainuddinrussel73.github.io/simple-book-shop/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/mainuddinrussel73.github.io/simple-book-shop/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/mainuddinrussel73.github.io/simple-book-shop/index.html",
+    "main.9dfcbfa0.css.map": "/mainuddinrussel73.github.io/simple-book-shop/static/css/main.9dfcbfa0.css.map",
+    "main.fdb6a805.js.map": "/mainuddinrussel73.github.io/simple-book-shop/static/js/main.fdb6a805.js.map",
+    "453.68c5b719.chunk.js.map": "/mainuddinrussel73.github.io/simple-book-shop/static/js/453.68c5b719.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9dfcbfa0.css",
+    "static/js/main.fdb6a805.js"
+  ]
+}
