@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      
+
       <ToastContainer />
       <Routes>
       <Route path="simple-book-shop/" element={<Home />} />
@@ -46,7 +46,7 @@ function App() {
         <Route path="simple-book-shop/faq" element={<FAQ />} />
         
         <Route path="simple-book-shop/book/:bookId" element={<BookDetails books={books} />} />
-        <Route path="simple-book-shop/*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
