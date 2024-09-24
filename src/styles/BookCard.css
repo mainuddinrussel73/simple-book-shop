@@ -28,8 +28,38 @@
     align-items: center;
     padding: 10px;
 }
-.left-card{
-  width: 50%;
+/* Left side image section */
+.left-card {
+  width: 40%; /* Allocate 40% of space to the image */
+  position: relative;
+}
+
+.left-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure image covers full area without distortion */
+}
+
+/* Tags styling */
+.tags-container {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+.book-card:hover .left-card .tag {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+.tag {
+  display: none;  
+  background-color: #F6ECEB; /* Primary color for tag */
+  color: #7D4F4A;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: bold;
 }
 .right-card{
   width: 50%;
@@ -53,23 +83,14 @@
   padding-left: 10px;
 }
 
-/* Tags for the book */
-.tag {
-  display: inline-block;
-  background-color: #ff6600;
-  color: white;
-  border-radius: 15px;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8rem;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
+
 
 /* Book title */
 .book-title {
   font-size: 18px;
   font-weight: bold;
   margin: 6px 0;
+  color: #7D4F4A;
 }
 
 /* Author and other details */
@@ -91,8 +112,8 @@
 }
 /* Button styling */
 .details-button {
-  background-color: #ff6600;
-  color: white;
+  background-color: #F6ECEB;
+  color: #7D4F4A;
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -102,7 +123,8 @@
 }
 
 .details-button:hover {
-  background-color: #ff4500; /* Darker shade on hover */
+  background-color: #7D4F4A;
+  color: #F6ECEB;
 }
 
 /* Responsive adjustments */

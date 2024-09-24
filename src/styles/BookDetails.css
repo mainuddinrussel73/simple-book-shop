@@ -28,16 +28,15 @@
 .book-image-det {
   width: 250px;  /* Fixed width */
   height: auto; /* Fixed height */
-  overflow: hidden;
   margin-left: 20px;
-    border-radius: 20px;
-    height: fit-content;
+   
 }
 
 .book-image-det img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  box-shadow: 0 0 5px -1px black, inset -1px 1px 2px rgba(255, 255, 255, 0.5);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -66,12 +65,37 @@
 }
 
 .book-category-det,
-.book-rating-det,
+.book-rating-det {
+  font-size: 16px;
+  margin-bottom: 0px;
+  color: #333;
+}
+
 .book-review-det {
   font-size: 16px;
-  margin-bottom: 15px;
-  color: #555;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: Garamond, serif;
+  font-style: italic;
 }
+
+.star-rating {
+  display: flex;
+}
+
+.star {
+  color: #ccc; /* Color for empty stars */
+  font-size: 24px; /* Adjust star size */
+}
+
+.star.filled {
+  color: #f39c12; /* Color for filled stars */
+}
+
+.star.half {
+  color: #f39c12; /* Color for half stars */
+}
+
 
 .book-meta-det p {
   margin: 10px 0;
@@ -83,8 +107,8 @@
 }
 
 .tag-det {
-  background-color: #f39c12;
-  color: #fff;
+  background-color: #EDE2E1;
+  color: #7D4F4A;
   padding: 5px 10px;
   border-radius: 20px;
   margin-right: 10px;
@@ -96,8 +120,6 @@
 }
 
 .btn-det {
-  background-color: #2980b9;
-  color: white;
   border: none;
   padding: 12px 24px;
   margin: 10px;
@@ -111,20 +133,34 @@
   vertical-align: middle; /* Align with text */
 }
 
-.btn-det:hover {
-  background-color: #1a60a1;
-}
+
 
 .wish-btn-det {
-  background-color: #27ae60;
+  background-color: #bddbeb;
+  color: #071d2d;
+}
+.cart-btn-det{
+  background-color: #d3ed96;
+  color:#343310;
+}
+
+.cart-btn-det:hover{
+  color: #d3ed96;
+  background-color:#343310;
 }
 
 .wish-btn-det:hover {
-  background-color: #1a9448;
+  color: #bddbeb;
+  background-color: #071d2d;
 }
+.download-btn{
+  background-color: #dfc4e6;
+}
+
+
 .download-btn a {
   text-decoration: none;
-  color: white;
+  color: #3b0b2d;
   border-radius: 5px;
 }
 
@@ -225,7 +261,8 @@
   }
 
   .book-image-det {
-    width: 90%;
+    width: 100%;
+  margin-left: 0px;
   }
 
   .book-info-det {

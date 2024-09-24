@@ -124,6 +124,19 @@
   .footer-section {
     margin: 15px 0; /* Space between sections */
   }
+  .links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .links ul li {
+    margin: 10px; /* Space between links */
+  }
   .socials{
     display: flex;
     justify-content: center;
@@ -154,6 +167,19 @@
 
   .footer-section p {
     font-size: 14px; /* Adjust paragraph size */
+  }
+  .links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .links ul li {
+    margin: 10px; /* Space between links */
   }
   .socials{
     display: flex;

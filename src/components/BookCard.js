@@ -10,7 +10,7 @@ const BookCard = ({ book, imageUrl }) => {
     <div className="book-card"   key={book.id} >
       <div className='left-card'>
         <img src={book.image} alt={book.bookName} />
-        <div>
+        <div className="tags-container">
           {book.tags.map((tag, index) => (
             <span key={index} className="tag" >{tag}</span>
           ))}

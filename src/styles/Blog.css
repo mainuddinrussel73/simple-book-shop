@@ -10,8 +10,7 @@
   }
   /* Blog Section Styles */
 .blog-section {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  padding: 0px 0px;
 }
 
 .section-title {
@@ -82,8 +81,8 @@
 }
 
 .blog-button {
-  background-color: #007bff;
-  color: white;
+  background-color: #EDE2E1;
+  color: #7D4F4A;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -96,6 +95,20 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .blog-page-container {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 140px;  
+  }
+  .blog-grid{
+    display: inline-block;
+    gap: 10px;
+  }
+  .blog-card {
+    background-color: white;
+    margin-top: 10px;
+  }
   .section-title {
     font-size: 2rem;
   }

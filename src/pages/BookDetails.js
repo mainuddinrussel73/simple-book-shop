@@ -60,25 +60,55 @@ const BookDetails = ({ books }) => {
     return <p>Loading book details...</p>;  // Prevent rendering if books are still loading
   }
   const handleWishlist = () => {
-    toast(`${book.bookName} has been successfully added to the Wishlist`);
+    toast(`${book.bookId} -- ${book.bookName} has been successfully added to the Wishlist`);
   };
 
   const handleCart = () => {
-    toast(`${book.bookName} has been successfully added to the Cart`);
+    toast(`${book.bookId} -- ${book.bookName} has been successfully added to the Cart`);
   };
+
+  const renderStars = (rating) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5;
+  
+    // Full Stars
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<i key={i} style={{color: "#f39c12" }} className="fas fa-star" />);
+    }
+  
+    // Half Star
+    if (halfStar) {
+      stars.push(<i key={fullStars} style={{color: "#f39c12" }} className="fas fa-star-half-alt" />);
+    }
+  
+    // Empty Stars
+    for (let i = fullStars + (halfStar ? 1 : 0); i < 5; i++) {
+      stars.push(<i key={i} style={{color: "#f39c12" }}  className="far fa-star" />);
+    }
+  
+    return stars;
+  };
+  
+   
 
   return (
     <div className='book-details-main'>
       <div className="book-details-container">
         <div className="book-card-det">
-          <div className="book-image-det">
+          <div className="book-image-det" >
             <img src={book.image} alt={book.bookName} />
           </div>
           <div className="book-info-det">
             <h2 className="book-title-det">{book.bookName}</h2>
             <h4 className="book-author-det">by {book.author}</h4>
             <p className="book-category-det">Category: {book.category}</p>
-            <p className="book-rating-det">Rating: ⭐ {book.rating}</p>
+            <div className="book-rating-det" style={{ marginBottom : "20px" }}>
+              <p> Ratings : </p>
+              <span className="star-rating">
+                {renderStars(book.rating)}
+              </span>
+            </div>
             <p className="book-review-det">"{book.review}"</p>
             
             <div className="book-meta-det">
