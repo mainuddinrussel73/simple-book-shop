@@ -4,6 +4,9 @@ import Slider from 'react-slick';
 import banner1 from '../images/banner1.jpeg'
 import banner2 from '../images/banner2.jpg'
 import banner3 from '../images/banner3.jpg'
+import image1 from '../images/image1.png'
+import image2 from '../images/image2.png'
+import image3 from '../images/image3.png'
 
 
 const banners = [
@@ -12,21 +15,27 @@ const banners = [
     title: 'Discover a World of Stories',
     subtitle: 'Find your next great read at Bookshop Name.',
     buttonText: 'Buy Book',
-    image: banner1,
+    imageBack: banner1,
+    image: image1,
+    buttonLink: "/shop",
   },
   {
     id: 2,
     title: 'Uncover Hidden Gems',
     subtitle: 'Explore a curated selection of books.',
     buttonText: 'Shop Now',
-    image: banner2,
+    imageBack: banner2,
+    image: image2,
+    buttonLink: "/shop",
   },
   {
     id: 3,
     title: 'Your Favorite Authors, All in One Place',
     subtitle: 'Find books from all your favorite authors.',
     buttonText: 'Browse Collection',
-    image: banner3,
+    imageBack: banner3,
+    image: image3,
+    buttonLink: "/shop",
   }
 ];
 
@@ -72,11 +81,14 @@ const Banner = () => {
       <Slider {...settings}>
         {banners.map((banner) => (
           <div key={banner.id} >
-            <div className="banner-slide" style={{ backgroundImage: `url(${banner.image})` }}>
-              <div className="banner-content" >
-                <h1>{banner.title}</h1>
-                <p>{banner.subtitle}</p>
+            <div className="banner-slide">
+              <div className="banner-text"  >
+                <h1 className='banner-title'>{banner.title}</h1>
+                <p className='banner-subtitle'>{banner.subtitle}</p>
                 <button className={`banner-button back-${banner.id}`}>{banner.buttonText}</button>
+              </div>
+              <div className="banner-image">
+                <img src={banner.image} alt={banner.title} />
               </div>
 
             </div>

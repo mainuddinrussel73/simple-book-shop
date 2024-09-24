@@ -1,140 +1,165 @@
-/* Footer CSS */
-
+/* Basic footer styling */
 .footer {
-    background-color: #FEFDFD;
-    color: #7D4F4A;
-    padding: 40px 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .footer .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
+  background-color: #F1F0EF; /* Dark background for the footer */
+  color: #7D4F4A; /* White text color */
+  padding: 40px 20px; /* Padding around the footer */
+  position: relative; /* Ensure positioning context */
+}
+
+.container {
+  max-width: 1200px; /* Maximum width for the footer content */
+  margin: 0 auto; /* Center the footer content */
+}
+
+.footer-content {
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-between; /* Space out the children */
+}
+
+/* Footer section styles */
+.footer-section {
+  flex: 1; /* Allow to grow */
+  min-width: 250px; /* Minimum width for responsiveness */
+  margin: 20px; /* Space between sections */
+}
+
+/* Heading styles */
+.footer-section h2, .footer-section h3 {
+  margin-bottom: 15px; /* Space below heading */
+  font-weight: bold; /* Bold text for headings */
+}
+
+/* About section styles */
+.about p {
+  margin-bottom: 15px; /* Space below paragraph */
+}
+
+/* Social links styling */
+.socials {
+  display: flex; /* Use Flexbox for social icons */
+  gap: 15px; /* Space between social icons */
+}
+
+.socials a {
+  color: #7D4F4A; /* White color for social icons */
+  font-size: 20px; /* Font size for icons */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.socials a:hover {
+  color: #f39c12; /* Change color on hover */
+}
+
+/* Links section styling */
+.links ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.links ul li {
+  margin: 10px; /* Space between links */
+}
+
+.links ul li .nav-item {
+  color: #7D4F4A; 
+  text-decoration: none; 
+  border: none;
+  transition: color 0.3s; 
+}
+
+.links ul li .nav-item:hover {
+  color: #7D4F4A; /* Change color on hover */
+  background-color: #F4E8E7;
+}
+
+/* Contact section styles */
+.contact p {
+  margin: 5px 0; /* Space between contact details */
+}
+
+/* Subscribe section styles */
+.subscribe-form {
+  display: flex; /* Use Flexbox for form layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px; /* Padding for input field */
+  margin-bottom: 10px; /* Space below input field */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.subscribe-form button {
+  background-color: #EDE2E1; /* Button color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  color: #7D4F4A; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.subscribe-form button:hover {
+  background-color: #F4E8E7; /* Darker button color on hover */
+}
+
+/* Bottom footer section */
+.footer-bottom {
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Space above bottom section */
+  font-size: 14px; /* Font size for copyright text */
+}
+
+/* Responsive styles for tablets and mobile */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text for mobile */
   }
-  
+
   .footer-section {
-    flex: 1;
-    margin-bottom: 20px;
-    max-width: 100%;
+    margin: 15px 0; /* Space between sections */
   }
-  
-  .footer-section h2,
-  .footer-section h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #f1c40f;
-  }
-  
-  .footer-section p {
-    line-height: 1.6;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul li a {
-    color: #7D4F4A;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-section ul li a:hover {
-    color: #f1c40f;
-  }
-  
-  .socials {
+  .socials{
     display: flex;
-    gap: 15px;
+    justify-content: center;
   }
-  
-  .socials a {
-    color: #7D4F4A;
-    font-size: 20px;
-    transition: color 0.3s ease;
-  }
-  
-  .socials a:hover {
-    color: #f1c40f;
-  }
-  .footer-section.subscribe {
-    flex: 1;
-  }
-  
+
   .subscribe-form {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    width: 100%; /* Full width for mobile inputs */
   }
-  
-  .subscribe-form input {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    outline: none;
+
+  .subscribe-form input[type="email"] {
+    width: calc(100% - 22px); /* Full width minus padding */
   }
-  
-  .subscribe-form button {
-    padding: 10px 20px;
-    background-color: #f1c40f;
-    color: #2d2d2d;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .subscribe-form button:hover {
-    background-color: #e1b10e;
-  }
+
   .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #444;
-    padding: 20px 0;
+    margin-top: 30px; /* More space above bottom section */
   }
-  
-  .footer-bottom p {
-    margin: 0;
-    color: #888;
-    font-size: 14px;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .footer-section h2 {
+    font-size: 24px; /* Adjust heading size */
   }
-  
-  /* Responsive Footer */
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-    }
-  
-    .footer-section {
-      margin-bottom: 30px;
-    }
-    .subscribe-form {
-      flex-direction: column;
-    }
-  
-    .subscribe-form input {
-      width: 90%;
-    }
-  
-    .subscribe-form button {
-      width: fit-content;
-      margin-top: 10px;
-    }
+
+  .footer-section h3 {
+    font-size: 20px; /* Adjust heading size */
   }
-  
+
+  .footer-section p {
+    font-size: 14px; /* Adjust paragraph size */
+  }
+  .socials{
+    display: flex;
+    justify-content: center;
+  }
+  .socials a {
+    font-size: 18px; /* Adjust icon size */
+  }
+}
