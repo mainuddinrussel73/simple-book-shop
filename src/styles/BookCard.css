@@ -16,10 +16,9 @@
 }
 /* Individual book card */
 .book-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+  background-color: #f5dbdb;
+  border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   overflow: hidden; /* Prevent overflow */
   display: flex;
@@ -46,10 +45,16 @@
   bottom: 10px;
   left: 5px;
 }
+
+.book-card img:hover{
+  filter: blur(3px);
+}
 .book-card:hover .left-card .tag {
   display: inline-block;
   transition: opacity 0.3s ease;
   opacity: 1;
+  
+
 }
 .tag {
   display: none;  

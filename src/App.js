@@ -1,40 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes  } from 'react-router-dom';
+import { HashRouter as Router, useLocation, Navigate } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Books from './pages/Books';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
+import UserProfile from './pages/UserProfile'; // Assuming UserProfile is in components folder
 
 import FAQ from './pages/FAQ';
 import BookDetails from './pages/BookDetails';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ForgotPassword from './pages/ForgotPassword';
 import NotFound from './pages/NotFound'; // 404 Page
+import ProtectedRoute from './ProtectedRoute';
+import { AuthProvider } from './AuthContext'; // Import AuthProvider
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const [books, setBooks] = useState([]);
-  const url = "https://api.jsonbin.io/v3/b/66f17ec1ad19ca34f8ab53d0/latest";
-  const apiKey = "$2a$10$LLcAfF59gQLk0czNgZlJ..xPiPK3fuLRoPzGQTIbzZDnHcQ9h.V3G";
-
-  const getData=()=>{
-    fetch(url, {
-      method: "GET",
-      headers: {
-        "X-Master-Key": apiKey
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      setBooks(data.record);
-      console.log(data.record)
-    }
-      );
-  }
-  useEffect(() => {
-    getData();
-  }, []);
+  
   const blogs = [
     {
       id: 1,
@@ -113,23 +103,96 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      
-      <ToastContainer />
-      <Routes>
-      <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetails blogs={blogs} />} />
-
-        <Route path="/faq" element={<FAQ />} />
-        
-        <Route path="/book/:bookId" element={<BookDetails books={books} />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
+      <Router>
+        <AuthProvider>
+          <Navbar/>
+          <ToastContainer />
+          <Routes>
+              {/* Protect login and signup pages */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup  />} />
+              <Route path="/forgot-password" element={<ForgotPassword /> } />
+          
+          
+            {/* Protected routes */}
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/books"
+              element={
+                <ProtectedRoute>
+                  <Books />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <UserProfile />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <ProtectedRoute>
+                  <About />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/blog"
+              element={
+                <ProtectedRoute>
+                  <Blog />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/blog/:id"
+              element={
+                <ProtectedRoute>
+                  <BlogDetails blogs={blogs}/>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/book/:bookId"
+              element={
+                <ProtectedRoute>
+                  <BookDetails />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/faq"
+              element={
+                <ProtectedRoute>
+                  <FAQ />
+                </ProtectedRoute>
+              }
+            />
+            {/* Catch all for 404 */}
+            <Route path="*" element={<NotFound />} />
+            
+          </Routes>
+          <Footer/>
+        </AuthProvider>
+     </Router>
+     
     </div>
   );
 }
+
+
+
+
 
 export default App;
